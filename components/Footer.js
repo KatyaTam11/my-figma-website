@@ -8,27 +8,29 @@ export default function Footer() {
     <footer
       style={{
         width: '100%',
-        padding: '80px 64px',       // такие же паддинги, как в секциях
+        padding: '80px 64px',             // отступы сверху/снизу и слева/справа
         boxSizing: 'border-box',
-        background: 'var(--Color-White)',
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
         gap: '80px',
+        background: 'var(--Color-White)',
       }}
     >
-      {/* Верхний ряд: логотип + навигация + форма */}
+      {/* Верхний ряд */}
       <div
         style={{
+          width: '100%',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start',
-          width: '100%',
         }}
       >
-        {/* Логотип + меню */}
+        {/* Логотип + ссылки */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <img src="/placeholder.png" alt="Logo" width={117} height={36} />
-          <nav style={{ display: 'flex', gap: '32px' }}>
+
+          <nav style={{ display: 'flex', gap: '32px', width: '493px' }}>
             {topLinks.map(link => (
               <a
                 key={link}
@@ -39,6 +41,7 @@ export default function Footer() {
                   fontWeight: 600,
                   lineHeight: '21px',
                   textDecoration: 'none',
+                  whiteSpace: 'nowrap'
                 }}
               >
                 {link}
@@ -48,7 +51,7 @@ export default function Footer() {
         </div>
 
         {/* Форма подписки */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div style={{ width: '400px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div
             style={{
               color: 'var(--Color-Black)',
@@ -60,7 +63,7 @@ export default function Footer() {
             Join
           </div>
 
-          <form style={{ display: 'flex', gap: '16px' }}>
+          <div style={{ display: 'flex', gap: '16px', height: '48px' }}>
             <input
               type="email"
               placeholder="Your email here"
@@ -73,6 +76,7 @@ export default function Footer() {
                 fontSize: '16px',
                 color: 'rgba(0, 0, 0, 0.60)',
                 boxSizing: 'border-box',
+                height: '100%',
               }}
             />
             <button
@@ -85,37 +89,38 @@ export default function Footer() {
                 fontSize: '16px',
                 fontWeight: 500,
                 cursor: 'pointer',
+                height: '100%',
               }}
             >
               Join
             </button>
-          </form>
+          </div>
 
-          <p
-            style={{
-              margin: 0,
-              color: 'rgba(0, 0, 0, 0.90)',
-              fontSize: '12px',
-              lineHeight: '18px',
-            }}
-          >
+          <div style={{ color: 'rgba(0, 0, 0, 0.90)', fontSize: '12px', lineHeight: '18px' }}>
             By subscribing you agree to our Privacy Policy.
-          </p>
+          </div>
         </div>
       </div>
 
       {/* Разделитель */}
-      <hr style={{ border: 'none', borderTop: '1px solid rgba(0,0,0,0.15)' }} />
-
-      {/* Нижний ряд: ссылки политики + копирайт */}
       <div
         style={{
+          width: '100%',
+          height: 0,
+          borderTop: '1px solid rgba(0, 0, 0, 0.15)',
+        }}
+      />
+
+      {/* Нижний ряд */}
+      <div
+        style={{
+          width: '100%',
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center',
-          width: '100%',
+          alignItems: 'flex-start',
         }}
       >
+        {/* Политики */}
         <div style={{ display: 'flex', gap: '24px' }}>
           {bottomLinks.map(link => (
             <a
@@ -127,20 +132,16 @@ export default function Footer() {
                 fontWeight: 400,
                 lineHeight: '21px',
                 textDecoration: 'underline',
+                whiteSpace: 'nowrap'
               }}
             >
               {link}
             </a>
           ))}
         </div>
-        <div
-          style={{
-            color: 'var(--Color-Black)',
-            fontSize: '14px',
-            fontWeight: 400,
-            lineHeight: '21px',
-          }}
-        >
+
+        {/* Копирайт */}
+        <div style={{ color: 'var(--Color-Black)', fontSize: '14px', fontWeight: 400, lineHeight: '21px' }}>
           © 2025 Recurio. All rights reserved.
         </div>
       </div>
