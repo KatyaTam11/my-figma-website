@@ -31,7 +31,7 @@ export default function Features() {
         alignSelf: 'stretch',
         padding: '112px 64px',
         background: 'var(--Color-White)',
-        display: 'inline-flex',
+        display: 'flex',
         flexDirection: 'column',
         gap: '80px'
       }}
@@ -55,7 +55,7 @@ export default function Features() {
             key={title}
             style={{
               flex: '1 1 0',
-              display: 'inline-flex',
+              display: 'flex',
               flexDirection: 'column',
               gap: '32px'
             }}
@@ -75,8 +75,9 @@ export default function Features() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center',
-                gap: '32px'
+                alignItems: 'flex-start',  // <-- левый край
+                textAlign: 'left',          // <-- текст тоже влево
+                gap: '16px'
               }}
             >
               <h3
