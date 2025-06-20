@@ -31,7 +31,7 @@ export default function Features() {
         alignSelf: 'stretch',
         padding: '112px 64px',
         background: 'var(--Color-White)',
-        display: 'flex',
+        display: 'inline-flex',
         flexDirection: 'column',
         gap: '80px'
       }}
@@ -55,7 +55,7 @@ export default function Features() {
             key={title}
             style={{
               flex: '1 1 0',
-              display: 'flex',
+              display: 'inline-flex',
               flexDirection: 'column',
               gap: '32px'
             }}
@@ -71,13 +71,14 @@ export default function Features() {
               }}
             />
 
+            {/* Здесь правим выравнивание */}
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'flex-start',  // <-- левый край
-                textAlign: 'left',          // <-- текст тоже влево
-                gap: '16px'
+                alignItems: 'flex-start',  // выравнивание влево
+                textAlign: 'left',          // текст слева
+                gap: '32px'
               }}
             >
               <h3
