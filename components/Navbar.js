@@ -1,14 +1,13 @@
 // components/Navbar.js
+
 export default function Navbar() {
   return (
     <header
       style={{
         width: '100%',
-        background: 'var(--Color-White)',
-        overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
-        boxShadow: '0 1px 4px rgba(0,0,0,0.1)', // по желанию тень
+        background: 'var(--Color-White)',
       }}
     >
       <div
@@ -23,11 +22,10 @@ export default function Navbar() {
           height: '72px',
         }}
       >
-        {/* Логотип + навигация */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
           <img src="/placeholder.png" alt="Logo" width={117} height={36} />
           <nav style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
-            {['Home Page','Features List','Pricing Plans','Support Center'].map(label => (
+            {['Home Page', 'Features List', 'Pricing Plans', 'Support Center'].map(label => (
               <span
                 key={label}
                 style={{
@@ -42,29 +40,36 @@ export default function Navbar() {
             ))}
           </nav>
         </div>
-        {/* Кнопки */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <button style={{
-            padding: '8px 20px',
-            background: 'var(--Color-Royal-Blue-Lightest)',
-            borderRadius: '6px',
-            border: 'none',
-            fontSize: '16px',
-            fontWeight: 500,
-            cursor: 'pointer'
-          }}>Join</button>
-          <button style={{
-            padding: '8px 20px',
-            background: 'var(--Color-Royal-Blue)',
-            borderRadius: '6px',
-            border: 'none',
-            color: 'var(--Color-White)',
-            fontSize: '16px',
-            fontWeight: 500,
-            cursor: 'pointer'
-          }}>Start</button>
+          <button
+            style={{
+              padding: '8px 20px',
+              background: 'var(--Color-Royal-Blue-Lightest)',
+              borderRadius: '6px',
+              border: 'none',
+              fontSize: '16px',
+              fontWeight: 500,
+              cursor: 'pointer',
+            }}
+          >
+            Join
+          </button>
+          <button
+            style={{
+              padding: '8px 20px',
+              background: 'var(--Color-Royal-Blue)',
+              borderRadius: '6px',
+              border: 'none',
+              color: 'var(--Color-White)',
+              fontSize: '16px',
+              fontWeight: 500,
+              cursor: 'pointer',
+            }}
+          >
+            Start
+          </button>
         </div>
       </div>
     </header>
-  )
+  );
 }
