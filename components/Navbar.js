@@ -2,26 +2,26 @@
 
 export default function Navbar() {
   return (
-    <div
+    <header
       style={{
-        width: '1440px',
+        width: '100%',                    // во весь экран
         background: 'var(--Color-White)',
-        overflow: 'hidden',
-        display: 'inline-flex',
-        flexDirection: 'column',
-        alignItems: 'center'
+        boxSizing: 'border-box',
       }}
     >
       <div
         style={{
-          alignSelf: 'stretch',
+          maxWidth: '1440px',             // ограничиваем контент
+          margin: '0 auto',               // центрируем
           height: '72px',
           padding: '0 64px',
-          display: 'inline-flex',
-          justifyContent: 'space-between',
-          alignItems: 'center'
+          display: 'flex',                // по горизонтали
+          justifyContent: 'space-between',// логотип — кнопки по краям
+          alignItems: 'center',
+          boxSizing: 'border-box',
         }}
       >
+        {/* Левая группа: лого + ссылки */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
           <img
             src="/placeholder.png"
@@ -45,6 +45,8 @@ export default function Navbar() {
             ))}
           </nav>
         </div>
+
+        {/* Правая группа: кнопки */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <button
             style={{
@@ -75,6 +77,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
