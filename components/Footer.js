@@ -6,11 +6,10 @@ export default function Footer() {
       style={{
         width: '100%',
         background: 'var(--Color-White)',
-        padding: '80px 16px',
+        padding: '80px 64px',
         boxSizing: 'border-box',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
         gap: '80px',
       }}
     >
@@ -18,13 +17,14 @@ export default function Footer() {
       <div
         style={{
           width: '100%',
-          maxWidth: '1440px',
+          maxWidth: '1440px',            // контейнер по центру
+          margin: '0 auto',               // центрирование
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start',
         }}
       >
-        {/* Логотип + ссылки */}
+        {/* Левый блок: логотип + ссылки */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <img src="/placeholder.png" alt="Logo" width={117} height={36} />
           <nav style={{ display: 'flex', gap: '32px' }}>
@@ -46,7 +46,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Форма подписки */}
+        {/* Правый блок: форма подписки */}
         <div style={{ width: '400px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div
             style={{
@@ -105,7 +105,8 @@ export default function Footer() {
       <div
         style={{
           width: '100%',
-          maxWidth: '1440px',
+          maxWidth: '1440px',            // тот же контейнер
+          margin: '0 auto',
           display: 'flex',
           flexDirection: 'column',
           gap: '32px',
@@ -120,6 +121,7 @@ export default function Footer() {
             alignItems: 'center',
           }}
         >
+          {/* Ссылки политики */}
           <div style={{ display: 'flex', gap: '24px' }}>
             {['Privacy Policy', 'Terms of Use', 'Cookie Policy'].map(link => (
               <a
@@ -137,6 +139,8 @@ export default function Footer() {
               </a>
             ))}
           </div>
+
+          {/* Копирайт */}
           <div
             style={{
               color: 'var(--Color-Black)',
