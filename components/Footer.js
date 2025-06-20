@@ -8,27 +8,26 @@ export default function Footer() {
     <footer
       style={{
         width: '100%',
-        padding: '80px 16px',
+        padding: '80px 64px',       // такие же паддинги, как в секциях
         boxSizing: 'border-box',
+        background: 'var(--Color-White)',
         display: 'flex',
         flexDirection: 'column',
         gap: '80px',
-        background: 'var(--Color-White)',
       }}
     >
       {/* Верхний ряд: логотип + навигация + форма */}
       <div
         style={{
-          width: '100%',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start',
+          width: '100%',
         }}
       >
-        {/* Логотип и ссылки */}
+        {/* Логотип + меню */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <img src="/placeholder.png" alt="Logo" width={117} height={36} />
-
           <nav style={{ display: 'flex', gap: '32px' }}>
             {topLinks.map(link => (
               <a
@@ -106,24 +105,17 @@ export default function Footer() {
       </div>
 
       {/* Разделитель */}
-      <hr
-        style={{
-          width: '100%',
-          border: 'none',
-          borderTop: '1px solid rgba(0,0,0,0.15)',
-        }}
-      />
+      <hr style={{ border: 'none', borderTop: '1px solid rgba(0,0,0,0.15)' }} />
 
       {/* Нижний ряд: ссылки политики + копирайт */}
       <div
         style={{
-          width: '100%',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          width: '100%',
         }}
       >
-        {/* Ссылки политики */}
         <div style={{ display: 'flex', gap: '24px' }}>
           {bottomLinks.map(link => (
             <a
@@ -141,8 +133,6 @@ export default function Footer() {
             </a>
           ))}
         </div>
-
-        {/* Копирайт */}
         <div
           style={{
             color: 'var(--Color-Black)',
