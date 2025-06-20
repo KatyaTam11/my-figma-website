@@ -7,24 +7,25 @@ export default function Integrations() {
         alignSelf: 'stretch',
         padding: '112px 64px',
         background: 'var(--Color-Neutral-Darker)',
-        display: 'inline-flex',
+        display: 'flex',            // заменил inline-flex на flex
         flexDirection: 'column',
-        gap: '80px'
+        gap: '80px',
       }}
     >
       <div
         style={{
-          display: 'inline-flex',
+          display: 'flex',        // заменил inline-flex на flex
           gap: '80px',
-          width: '100%'
+          width: '100%',
         }}
       >
+        {/* Заголовок */}
         <div
           style={{
             flex: '1 1 0',
-            display: 'inline-flex',
+            display: 'flex',      // заменил inline-flex на flex
             flexDirection: 'column',
-            gap: '16px'
+            gap: '16px',
           }}
         >
           <span
@@ -32,7 +33,7 @@ export default function Integrations() {
               color: 'rgba(255, 255, 255, 0.50)',
               fontSize: '16px',
               fontWeight: 600,
-              lineHeight: '24px'
+              lineHeight: '24px',
             }}
           >
             Integrations
@@ -43,35 +44,36 @@ export default function Integrations() {
               color: 'var(--Color-White)',
               fontSize: '48px',
               fontWeight: 600,
-              lineHeight: '57.6px'
+              lineHeight: '57.6px',
             }}
           >
             Seamless Payment Processing with Leading Platforms
           </h2>
         </div>
 
+        {/* Карточки интеграций */}
         <div
           style={{
             flex: '1 1 0',
-            display: 'inline-flex',
+            display: 'flex',      // заменил inline-flex на flex
             flexDirection: 'column',
-            gap: '32px'
+            gap: '32px',
           }}
         >
           <div
             style={{
-              display: 'inline-flex',
+              display: 'flex',    // заменил inline-flex на flex
               gap: '24px',
-              padding: '8px 0'
+              padding: '8px 0',
             }}
           >
             {/* Stripe */}
             <div
               style={{
                 flex: '1 1 0',
-                display: 'inline-flex',
+                display: 'flex',  // заменил inline-flex на flex
                 flexDirection: 'column',
-                gap: '16px'
+                gap: '16px',
               }}
             >
               <div
@@ -79,11 +81,12 @@ export default function Integrations() {
                   width: '72px',
                   height: '72px',
                   padding: '16px',
+                  boxSizing: 'border-box',           // вот эта строка!
                   background: '#313131',
                   borderRadius: '8px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}
               >
                 <img src="/stripe-icon.png" alt="Stripe" width={32} height={32} />
@@ -94,7 +97,7 @@ export default function Integrations() {
                   color: 'var(--Color-White)',
                   fontSize: '20px',
                   fontWeight: 600,
-                  lineHeight: '30px'
+                  lineHeight: '30px',
                 }}
               >
                 Stripe Integration
@@ -104,7 +107,7 @@ export default function Integrations() {
                   margin: 0,
                   color: 'rgba(255, 255, 255, 0.85)',
                   fontSize: '16px',
-                  lineHeight: '24px'
+                  lineHeight: '24px',
                 }}
               >
                 Easily accept payments and manage subscriptions with Stripe's robust features.
@@ -115,9 +118,9 @@ export default function Integrations() {
             <div
               style={{
                 flex: '1 1 0',
-                display: 'inline-flex',
+                display: 'flex',  // заменил inline-flex на flex
                 flexDirection: 'column',
-                gap: '16px'
+                gap: '16px',
               }}
             >
               <div
@@ -125,11 +128,12 @@ export default function Integrations() {
                   width: '72px',
                   height: '72px',
                   padding: '16px',
+                  boxSizing: 'border-box',           // и здесь тоже
                   background: '#313131',
                   borderRadius: '8px',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}
               >
                 <img src="/paypal-icon.png" alt="PayPal" width={32} height={32} />
@@ -140,7 +144,7 @@ export default function Integrations() {
                   color: 'var(--Color-White)',
                   fontSize: '20px',
                   fontWeight: 600,
-                  lineHeight: '30px'
+                  lineHeight: '30px',
                 }}
               >
                 PayPal Integration
@@ -150,7 +154,7 @@ export default function Integrations() {
                   margin: 0,
                   color: 'rgba(255, 255, 255, 0.85)',
                   fontSize: '16px',
-                  lineHeight: '24px'
+                  lineHeight: '24px',
                 }}
               >
                 Simplify transactions and enhance customer trust with PayPal's secure payment solutions.
@@ -160,6 +164,7 @@ export default function Integrations() {
         </div>
       </div>
 
+      {/* Иллюстрация */}
       <img
         src="/integration-hero.png"
         alt="Integration illustration"
@@ -167,7 +172,7 @@ export default function Integrations() {
           alignSelf: 'stretch',
           height: '738px',
           borderRadius: '8px',
-          objectFit: 'cover'
+          objectFit: 'cover',
         }}
       />
     </section>
