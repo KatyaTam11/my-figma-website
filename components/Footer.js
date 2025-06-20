@@ -23,8 +23,6 @@ export default function Footer() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start',
-          maxWidth: '1440px',
-          margin: '0 auto',
         }}
       >
         {/* Логотип и ссылки */}
@@ -111,8 +109,6 @@ export default function Footer() {
       <hr
         style={{
           width: '100%',
-          maxWidth: '1440px',
-          margin: '0 auto',
           border: 'none',
           borderTop: '1px solid rgba(0,0,0,0.15)',
         }}
@@ -122,8 +118,6 @@ export default function Footer() {
       <div
         style={{
           width: '100%',
-          maxWidth: '1440px',
-          margin: '0 auto',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
